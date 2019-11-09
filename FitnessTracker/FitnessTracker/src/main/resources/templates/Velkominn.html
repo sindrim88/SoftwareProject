@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:switch="${exercises}">
+    <h2 th:case="null">No exercises yet!</h2>
+    <div th:case="*">
+        <h2>Exercises</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>duration</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="exercise : ${exercises}">
+                <td th:text="${exercise.title}"></td>
+                <td th:text="${exercise.description}"></td>
+                <td th:text="${exercise.duration}"></td>
+                <td><a th:href="@{/delete/{id}(id=${exercise.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/addexercise">Add a new exercise</a></p>
+
+    <p><a href="/login">Click here to register/login</a></p>
+    <p><a href="/stats">Click here to see exercise statistics</a></p>
+
+</div>
+</body>
+</html>

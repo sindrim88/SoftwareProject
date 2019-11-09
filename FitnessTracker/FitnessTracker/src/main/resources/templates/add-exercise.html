@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/addexercise}" th:object="${exercise}" method="post">
+    <label for="title">Title</label>
+    <input type="text" th:field="*{title}" id="title" placeholder="Title">
+    <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+    <label for="description">Description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="Description">
+    <span th:if="${#fields.hasErrors('description')}" th:errors="*{decription}"></span>
+    <label for="duration">Duration</label>
+    <input type="text" th:field="*{duration}" id="duration" placeholder="duration">
+    <span th:if="${#fields.hasErrors('duration')}" th:errors="*{duration}"></span>
+    <input type="submit" value="Add Exercise">
+</form>
+
+</body>
+</html>

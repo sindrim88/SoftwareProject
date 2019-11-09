@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <!--STLES-->
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+</head>
+<body>
+<div class="navbar">
+
+    <a class="logo" href="userprofile">Fitness Tracker</a>
+
+    <div class="left-nav dropdown">
+        <button class="dropbtn" >Sæll, Sindri ↓</button>
+        <div class="dropdown-content">
+            <a href="/">Log out</a>
+        </div>
+    </div>
+</div>
+<div class="page-content">
+    <div th:switch="${exerciceLog}">
+        <div th:case="*">
+            <span class="table-title">My Exercises</span>
+            <a class="btn add-button" href="addexercise">Add new</a>
+            <table class="workout-table">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Exercise</th>
+                    <th>Duration</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="log : ${exerciceLog}">
+                    <td th:text="${log.fromdate}"></td>
+                    <td th:text="${log.exercise.title}"></td>
+                    <td th:text="${log.exercise.duration}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <p><a href="stats">📈See my statistics→</a></p>
+</div>
+</body>
+</html>

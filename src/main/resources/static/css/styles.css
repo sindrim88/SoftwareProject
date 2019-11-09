@@ -1,0 +1,282 @@
+/* Clear browser styles */
+body {
+	font-family: "Nunito", serif;
+	text-decoration: none;
+	margin: 0px;
+}
+
+p{
+	font-weight: 200;
+}
+
+a {
+	color: #50a4b5;
+	text-decoration: none;
+}
+
+#logo {
+	width: 30px;
+}
+
+.btn {
+	font-size: 16px;
+}
+
+
+/* DROPDOWN MENU */
+/* Style The Dropdown Button */
+.dropbtn {
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+/* Dropdown Content*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.home-screen {
+	height: 100vh;
+	background-image: url('https://res.cloudinary.com/dqxnksmgd/image/upload/v1573211102/fitness-tracker/fitness-tracker.png?fbclid=IwAR1u5Jx_M-BrUnoy_6pYSPiOZTxGSzJ0qPdXUnVDwKNlZ2N_KWzZ3Rkubbc');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 25px 50px 25px 100px;
+}
+
+.nav-items {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.nav-items li {
+	display: inline;
+	float: right;
+}
+
+.navbar li a {
+	color: black;
+}
+
+.navbar li a:hover {
+	color: darkgrey;
+}
+
+.btn {
+	border-radius: 50px;
+	padding: 10px 20px 10px 20px;
+	background-color: #1A2980;
+	color: white;
+}
+
+.btn:hover {
+	background-color: #17E2DD;
+}
+
+/* Style the signup link as a CTA button*/
+.signup {
+	color: white;
+	margin-top: 50px;
+}
+
+
+.hero {
+}
+
+.hero-title {
+	font-family: "Nunito", serif;
+	font-size: 3em;
+	margin-top: 300px;
+	margin-bottom: 0px;
+	line-height: 1em;
+	max-width: 20%;
+}
+
+.hero-subtitle {
+	margin-bottom: 50px;
+	max-width: 30%;
+}
+
+/*.SIGN UP STLYES */
+
+.form-page{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.col-6 {
+	width: 50%;
+	display:inline;
+	height: 100vh;
+}
+
+#active {
+	background-image: url('https://res.cloudinary.com/dqxnksmgd/image/upload/v1573211103/fitness-tracker/active.jpg?fbclid=IwAR0i__mWVeH_2kiveuPm6gy2iQfpOtZQ6KmL4K74wKD_5fgBZYBPnuMf5IM');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.form-section{
+	padding-left: 100px;
+	padding-top: 25px;
+}
+
+.form-section h2 {
+	margin-top: 200px;
+}
+
+label {
+	display: block;
+}
+
+input {
+	padding: 10px;
+	display: block;
+	margin-bottom: 15px;
+	background-color: white;
+	border: 1px solid #f1f1f1;
+	width: 75%;
+}
+
+input.btn {
+	width: auto;
+}
+
+#weights {
+	background-image: url('https://res.cloudinary.com/dqxnksmgd/image/upload/v1573211102/fitness-tracker/weights.jpg?fbclid=IwAR25iWNRkbvo7xC3d38mbu7uikeV_g-L6OJEa7b0lLOxBl9TdOqGSVuvdQ0');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right center;
+}
+
+.logo {
+	letter-spacing: .2em;
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+/* PROFILE STYLES */
+
+.table-title {
+	font-size: 20px;
+}
+
+.add-button {
+	float: right;
+	margin-bottom: 25px;
+}
+
+.profile {
+	padding-left: 100px;
+	padding-top: 25px;
+}
+
+.navbar {
+	padding: 25px 50px 25px 100px;
+	border-bottom: 1px solid #f7f7f7;
+	box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+	opacity:.99;
+	vertical-align: bottom;
+}
+
+.page-content {
+	padding: 50px 100px 25px 100px;
+	background-color: #f7f7f7;
+	height: 100vh;
+}
+
+.left-nav {
+	float: right;
+}
+
+.workout-table {
+	width: 100%;
+	border: 1px solid #f7f7f7;
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+	background-color: white;
+}
+
+.workout-table th {
+	width: 33%;
+	text-align: left;
+	border-bottom: 1px solid #f1f1f1;
+	padding: 15px 15px 0px 15px;
+	color: #1A2980;
+}
+
+.workout-table td {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+/* Add exercise page */
+.workout-inputs {
+	width: 65%;
+	display: inline-block;
+	padding: 25px;
+}
+
+.form-art {
+	width: 30%;
+	display:inline-block;
+	vertical-align: top;
+	height: 100%;
+	background-image: url('https://res.cloudinary.com/dqxnksmgd/image/upload/v1573211102/fitness-tracker/jumprope.png?fbclid=IwAR2XOs1_-12i8f4YD9y5PLwGJ2UtNNBUWN-SMnlUTroXS8sc-baEuKJkfCI');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	float:right;
+	border-left: 1px solid #bbb;
+
+}
+
+.workout-form {
+	height: 350px;
+	background-color: white;
+	border: 1px solid #f1f1f1;
+	box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+	border-bottom: 3px solid #1A2980;;
+}
+
+.workout-form input {
+	width: 90%;
+}
+
+.workout-form .btn {
+	width: auto;
+}

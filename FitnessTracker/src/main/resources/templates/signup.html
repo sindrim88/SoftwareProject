@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <!--STLES-->
+    <link rel="stylesheet" href="../../../../../src/main/resources/static/css/styles.css">
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+<div class="form-page">
+    <div class="col-6 form-section">
+        <a class="logo" href="velkominn.html">Fitness Tracker</a>
+        <h2>Sign up for an account 🚴‍♂️</h2>
+        <form action="#" th:action="@{/signup}" th:object="${user}"  method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" th:field="*{uName}"/>
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password" th:value="*{password}"/>
+            <input type="submit" class="btn" value="Sign up 💪"/>
+        </form>
+        <p>Already have an account? <a href="login.html">Log in here.</a></p>
+    </div>
+    <div class="col-6" id="active">
+
+    </div>
+</div>
+</body>
+</html>

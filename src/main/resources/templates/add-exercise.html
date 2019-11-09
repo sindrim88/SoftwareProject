@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <!--STLES-->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="navbar">
+
+    <img id="logo" src="img/logo.png" />
+    <a class="logo" href="userprofile.html">Fitness Tracker</a>
+    <a class="left-nav" href="/">Log out</a>
+</div>
+<div class="page-content">
+    <h2>Add an exercise</h2>
+    <div class="workout-form">
+        <div class="workout-inputs">
+            <form action="#" th:action="@{/addexercise}" th:object="${exercise}" method="post">
+                <label for="title">Title</label>
+                <input type="text" th:field="*{title}" id="title" placeholder="Title">
+                <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+                <label for="description">Description</label>
+                <input type="text" th:field="*{description}" id="description" placeholder="Description">
+                <span th:if="${#fields.hasErrors('description')}" th:errors="*{decription}"></span>
+                <label for="duration">Duration</label>
+                <input type="text" th:field="*{duration}" id="duration" placeholder="Duration">
+                <span th:if="${#fields.hasErrors('duration')}" th:errors="*{duration}"></span>
+                <input type="submit" class="btn" value="Add Exercise">
+            </form>
+        </div>
+        <div class="form-art">
+
+        </div>
+
+    </div>
+
+</body>
+</html>

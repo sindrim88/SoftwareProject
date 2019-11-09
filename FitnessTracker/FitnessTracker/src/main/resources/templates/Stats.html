@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><div th:switch="${time}">
+    <h2 th:case="null">Statistics!</h2>
+    <div th:case="*">
+        <h2>Exercises</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Totaltime spent exercising</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="time : ${time}">
+                <td th:text="${time}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p><a href="/">Back to frontpage</a></p>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<body xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:switch="${exerciceLog}">
+    <h2 th:case="null">No Exercice yet!</h2>
+    <div th:case="*">
+        <h2>Exercice</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Exercice</th>
+                <th>User</th>
+                <th>From</th>
+                <th>To</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="log : ${exerciceLog}">
+                <td th:text="${log.exercise.title}"></td>
+                <td th:text="${log.user}"></td>
+                <td th:text="${log.fromdate}"></td>
+                <td th:text="${log.todate}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
